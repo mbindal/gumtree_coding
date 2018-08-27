@@ -1,0 +1,21 @@
+1>All spelling is correct
+2>All grammar is correct
+3>Words correctly describe the purpose of the application
+4>Check that all user input follows dd/mm/yyyy format
+  And any invalid input is blocked and a tip is provided to the user
+5>Check that user is able to modify the input or clear the input as required
+6>Check dd is restricted between 1 and 31 for Jan, march, may and so on
+7>Check dd is restricted between 1 and 30 for April, June and so on
+8>Check Feb shows dates between 1 and 28, 1 and 29 and 1 and 30 based on given
+  Year
+9>Check mm is restricted between 1 and 12
+10>Check  if both 1 and 01 are accepted as valid entries to dd and mm
+11>Check input date is less than or equal to today’s date
+12>Check that age is shown as 19 for a person aged 19 years and 11 months
+13>Check that age is shown as 19 for a person aged 19 years and 11 months 29 days
+14>Check that age is shown as 0 for a person aged 8 months
+15>Check that the buttons and the text label scale automatically after maximizing the browser window
+16>Try browser window refresh and see that the buttons and text label appears in the same form that they were in prior to the refresh
+17>Pick  10 random day and year in all 12 months of calendar age and verify that the age is correctly reported
+18>Try opening the app in parallel in different browser tabs and verify that the functionality reports correct age
+
