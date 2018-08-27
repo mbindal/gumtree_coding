@@ -40,7 +40,6 @@ public class Task1_Test_Steps {
 
 	@When("^user searches for the string Cars in London$")
 	public void user_searches_for_the_string_Cars_in_London() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 		WebElement element = driver.findElement(By.name("q"));
         element.sendKeys("Cars in London");
         element.submit();
@@ -49,18 +48,16 @@ public class Task1_Test_Steps {
 
 	@Then("^There are (\\d+) results found for Gumtree$")
 	public void there_are_results_found_for_Gumtree(int count) throws Throwable {
-		WebElement myDynamicElement = (new WebDriverWait(driver, 10))
-	              .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[@class='r']/a")));
+		 WebElement myDynamicElement = (new WebDriverWait(driver, 10))
+	         .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[@class='r']/a")));
 		 List<WebElement> findElements = driver.findElements(By.xpath("//*[@id='rso']//h3/a"));
 		 int actual_count = 0;
 		 for (WebElement webElement : findElements)
 		    {
-		        if (webElement.getAttribute("href").contains("gumtree"))
-		        	{
+		        if (webElement.getAttribute("href").contains("gumtree")) {
 		        	    link.add(webElement.getAttribute("href"));
 		        	    actual_count++;
-		        	}
-		            
+		        }
 		    }
 		 if (actual_count == count)
 			 System.out.println("success");
@@ -97,7 +94,7 @@ public class Task1_Test_Steps {
 		if (flag == 1)
 		   System.out.println("Failure");
 		else
-			System.out.println("Success");
+		   System.out.println("Success");
 	}
 	
 	@After

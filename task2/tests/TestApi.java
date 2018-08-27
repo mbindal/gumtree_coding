@@ -38,10 +38,12 @@ public class TestApi {
 	            fail("JSON Exception");
 	       }
 		 Random rn = new Random();
-		 JSONObject users_jsonobj = ((JSONObject)(users_jsonOutput.get(rn.nextInt(users_jsonOutput.size()))));
+		 JSONObject users_jsonobj = (
+		     (JSONObject)(users_jsonOutput.get(rn.nextInt(users_jsonOutput.size()))));
 		 String email_id = users_jsonobj.getString("email");
 		 user_id = users_jsonobj.getString("id");
-	     System.out.println("Test print random user email address Success! Random email id is " +  email_id);
+	     System.out.println("Test print random user email address " +
+		                    "Success! Random email id is " +  email_id);
      }
 
 	 @Test
@@ -68,7 +70,9 @@ public class TestApi {
             	 fail("Invalid post id range : " + post_id);
              }
          }
-		 System.out.println("Test random user have valid post id Success! All post ids have valid range for user id:" + user_id);
+		 System.out.println("Test random user have valid post id " +
+                            "Success! All post ids have valid range " +
+				            "for user id:" + user_id);
 	 }
 
 	 @Test
@@ -91,6 +95,7 @@ public class TestApi {
          if (post_id <= 0) {
              fail("Invalid post response while placing POST call");
          }
-		 System.out.printf("Test Place a POST api call Success! Valid post_id %s created for user id:%s\n", post_id, user_id);
+		 System.out.printf("Test Place a POST api call Success! " +
+                           "Valid post_id %s created for user id:%s\n", post_id, user_id);
 	 }
 }
