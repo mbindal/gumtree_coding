@@ -4,7 +4,6 @@ package stepDefinition;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -76,8 +75,10 @@ public class Task1_Test_Steps {
 			driver.navigate().to(link.get(i));
 			WebElement myDynamicElement = null;
 			myDynamicElement = (new WebDriverWait(driver, 10))
-		        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//article[@class='listing-maxi']/a[@class='listing-link']")));
-			link_count.add(driver.findElements(By.xpath("//article[@class='listing-maxi']/a[@class='listing-link']")).size());
+		        .until(ExpectedConditions.presenceOfElementLocated(
+		            By.xpath("//article[@class='listing-maxi']/a[@class='listing-link']")));
+			link_count.add(driver.findElements(
+					By.xpath("//article[@class='listing-maxi']/a[@class='listing-link']")).size());
 			title.add(driver.getTitle());
 		}
 			
